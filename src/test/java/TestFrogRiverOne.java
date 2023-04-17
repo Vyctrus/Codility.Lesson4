@@ -20,6 +20,7 @@ public class TestFrogRiverOne {
     @MethodSource("methodSourceArgs")
     public void solutionTest(int X, int[] A, int expected) {
         FrogRiverOne s = new FrogRiverOne();
+        System.out.println("What I expect: "+expected+"  What I got: "+s.solution(X,A));
         assertTrue((s.solution(X,A)==expected));
     }
 }

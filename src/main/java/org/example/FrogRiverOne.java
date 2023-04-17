@@ -7,13 +7,14 @@ public class FrogRiverOne {
 
         int[] leavesFirstTime=new int[X];
         Arrays.fill(leavesFirstTime, -1);
-        for(int i=0;i<leavesFirstTime.length;i++){
+        for(int i=0;i<A.length;i++){
             if(leavesFirstTime[A[i]-1]==-1){
                 leavesFirstTime[A[i]-1]=i;
             }
         }
+        //System.out.println(Arrays.toString(leavesFirstTime));
         int minTimeNeeded=-1;
-        for(int i=0;i< A.length;i++){
+        for(int i=0;i< leavesFirstTime.length;i++){
             if(leavesFirstTime[i]==-1){
                 return -1; //any leaf didnt appear in this place
             }
