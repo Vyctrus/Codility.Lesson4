@@ -4,6 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -20,7 +21,8 @@ public class TestMaxCounters {
     @MethodSource("methodSourceArgs")
     public void solutionTest(int N,int[] A, int[] expected) {
         MaxCounters s = new MaxCounters();
-        assertTrue((s.solution(N,A).equals(expected)));
+        System.out.println("Array i want: "+ Arrays.toString(expected) + "  Array i have: "+Arrays.toString(s.solution(N,A)));
+        assertTrue(Arrays.equals(s.solution(N,A),expected));
     }
 
 }
