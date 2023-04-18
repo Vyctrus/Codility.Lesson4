@@ -23,4 +23,6 @@ public class TestFrogRiverOne {
         System.out.println("What I expect: "+expected+"  What I got: "+s.solution(X,A));
         assertTrue((s.solution(X,A)==expected));
     }
+
+
 }
