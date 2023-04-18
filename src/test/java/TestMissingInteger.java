@@ -12,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class TestMissingInteger {
     static Stream<Arguments> methodSourceArgs() {
         return Stream.of(
-                arguments(new int[]{1,3,6,4,1,2}, 4),
+                arguments(new int[]{1,3,6,4,1,2}, 5),
                 arguments(new int[]{1,2,3}, 4),
                 arguments(new int[]{-1,-3}, 1)
 
@@ -23,6 +23,7 @@ public class TestMissingInteger {
     @MethodSource("methodSourceArgs")
     public void solutionTest(int[] A, int expected) {
         MissingInteger s = new MissingInteger();
+        System.out.println("Expected: "+expected+"  My result: "+s.solution(A));
         assertTrue((s.solution(A)==expected));
     }
 }
